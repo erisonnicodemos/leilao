@@ -1,0 +1,17 @@
+C:\www\desafio-totvs\backend\src\DevIO.Business\bin\Debug\netcoreapp3.1\LeilaoWeb.Business.deps.json
+C:\www\desafio-totvs\backend\src\DevIO.Business\bin\Debug\netcoreapp3.1\LeilaoWeb.Business.dll
+C:\www\desafio-totvs\backend\src\DevIO.Business\bin\Debug\netcoreapp3.1\LeilaoWeb.Business.pdb
+C:\www\desafio-totvs\backend\src\DevIO.Business\obj\Debug\netcoreapp3.1\LeilaoWeb.Business.AssemblyInfoInputs.cache
+C:\www\desafio-totvs\backend\src\DevIO.Business\obj\Debug\netcoreapp3.1\LeilaoWeb.Business.AssemblyInfo.cs
+C:\www\desafio-totvs\backend\src\DevIO.Business\obj\Debug\netcoreapp3.1\LeilaoWeb.Business.csproj.CoreCompileInputs.cache
+C:\www\desafio-totvs\backend\src\DevIO.Business\obj\Debug\netcoreapp3.1\LeilaoWeb.Business.dll
+C:\www\desafio-totvs\backend\src\DevIO.Business\obj\Debug\netcoreapp3.1\LeilaoWeb.Business.pdb
+C:\www\desafio-totvs\backend\src\LeilaoWeb.Business\bin\Debug\netcoreapp3.1\LeilaoWeb.Business.deps.json
+C:\www\desafio-totvs\backend\src\LeilaoWeb.Business\bin\Debug\netcoreapp3.1\LeilaoWeb.Business.dll
+C:\www\desafio-totvs\backend\src\LeilaoWeb.Business\bin\Debug\netcoreapp3.1\LeilaoWeb.Business.pdb
+C:\www\desafio-totvs\backend\src\LeilaoWeb.Business\obj\Debug\netcoreapp3.1\LeilaoWeb.Business.csprojAssemblyReference.cache
+C:\www\desafio-totvs\backend\src\LeilaoWeb.Business\obj\Debug\netcoreapp3.1\LeilaoWeb.Business.AssemblyInfoInputs.cache
+C:\www\desafio-totvs\backend\src\LeilaoWeb.Business\obj\Debug\netcoreapp3.1\LeilaoWeb.Business.AssemblyInfo.cs
+C:\www\desafio-totvs\backend\src\LeilaoWeb.Business\obj\Debug\netcoreapp3.1\LeilaoWeb.Business.csproj.CoreCompileInputs.cache
+C:\www\desafio-totvs\backend\src\LeilaoWeb.Business\obj\Debug\netcoreapp3.1\LeilaoWeb.Business.dll
+C:\www\desafio-totvs\backend\src\LeilaoWeb.Business\obj\Debug\netcoreapp3.1\LeilaoWeb.Business.pdb

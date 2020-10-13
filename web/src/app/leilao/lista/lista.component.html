@@ -1,0 +1,56 @@
+<div class="container main-container">
+
+    <h1>Leilões Cadastrados</h1>
+    <hr>
+
+    <p>
+        <a class="btn btn-info" [routerLink]="['/leiloes/adicionar-novo']">Cadastrar Novo Leilão</a>
+    </p>
+
+    <table class="table table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    Nome
+                </th>
+                <th>
+                    Valor Inicial
+                </th>
+                <th>
+                    Condição
+                </th>
+                <th>
+                    Ativo?
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let leilao of leiloes">
+                <td>
+                    {{ leilao.nome }}
+                </td>
+                <td>
+                    {{ leilao.valorInicial | currencyBrazil }}
+                </td>
+                <td>
+                    {{ leilao.condicao }}
+                </td>
+                <td>
+                    <input [checked]="leilao.ativo" class="check-box" disabled="disabled" type="checkbox">
+                </td>
+                <td class="text-right">
+                    <a class="btn btn-warning" [routerLink]="['/leiloes/detalhes',leilao.id]">
+                        <span class="fa fa-search"></span>
+                    </a>&nbsp;
+                    <a class="btn btn-info" [routerLink]="['/leiloes/editar',leilao.id]">
+                        <span class="fa fa-pencil-alt"></span>
+                    </a>&nbsp;
+                    <a class="btn btn-danger" [routerLink]="['/leiloes/excluir',leilao.id]">
+                        <span class="fa fa-trash"></span>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

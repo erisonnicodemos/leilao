@@ -1,0 +1,54 @@
+<div class="container main-container">
+    <h4>Excluir {{ leilao.nome }} </h4>
+    <br>
+    <h5>Você tem certeza disso?</h5>
+
+    <div class="row">
+               <div class="col-md-6">
+            <dl>
+                <dt>
+                    Nome
+                </dt>
+                <dd>
+                    {{ leilao.nome }}
+                </dd>
+                <dt>
+                    Valor Inicial
+                </dt>
+                <dd>
+                    {{ leilao.valorInicial | currencyBrazil }}
+                </dd>
+                <dt>
+                    Condição
+                </dt>
+                <dd>
+                    {{ leilao.condicao }}
+                </dd>
+                <dt>
+                    DataAbetura
+                </dt>
+                <dd>
+                    {{ leilao.dataAbetura | date:'dd/MM/yyyy' }}
+                </dd>
+                <dt>
+                    Data Finalização
+                </dt>
+                <dd>
+                    {{ leilao.dataFinalizacao | date:'dd/MM/yyyy' }}
+                </dd>
+                <dt>
+                    Ativo?
+                </dt>
+                <dd>
+                    <input [checked]="leilao.ativo" class="check-box" disabled="disabled" type="checkbox">
+                </dd>
+            </dl>
+
+            <div>
+                <a (click)="excluirLeilao()" href="javascript:void(0)" class="btn btn-danger">Excluir</a>&nbsp;
+                <a class="btn btn-info" href="javascript:window.history.back();">Voltar</a>
+            </div>
+        </div>
+    </div>
+
+</div>

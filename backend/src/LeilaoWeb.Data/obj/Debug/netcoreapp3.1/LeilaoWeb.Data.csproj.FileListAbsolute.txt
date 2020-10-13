@@ -1,0 +1,12 @@
+C:\www\desafio-totvs\backend\src\LeilaoWeb.Data\bin\Debug\netcoreapp3.1\LeilaoWeb.Data.deps.json
+C:\www\desafio-totvs\backend\src\LeilaoWeb.Data\bin\Debug\netcoreapp3.1\LeilaoWeb.Data.dll
+C:\www\desafio-totvs\backend\src\LeilaoWeb.Data\bin\Debug\netcoreapp3.1\LeilaoWeb.Data.pdb
+C:\www\desafio-totvs\backend\src\LeilaoWeb.Data\bin\Debug\netcoreapp3.1\LeilaoWeb.Business.dll
+C:\www\desafio-totvs\backend\src\LeilaoWeb.Data\bin\Debug\netcoreapp3.1\LeilaoWeb.Business.pdb
+C:\www\desafio-totvs\backend\src\LeilaoWeb.Data\obj\Debug\netcoreapp3.1\LeilaoWeb.Data.csprojAssemblyReference.cache
+C:\www\desafio-totvs\backend\src\LeilaoWeb.Data\obj\Debug\netcoreapp3.1\LeilaoWeb.Data.AssemblyInfoInputs.cache
+C:\www\desafio-totvs\backend\src\LeilaoWeb.Data\obj\Debug\netcoreapp3.1\LeilaoWeb.Data.AssemblyInfo.cs
+C:\www\desafio-totvs\backend\src\LeilaoWeb.Data\obj\Debug\netcoreapp3.1\LeilaoWeb.Data.csproj.CoreCompileInputs.cache
+C:\www\desafio-totvs\backend\src\LeilaoWeb.Data\obj\Debug\netcoreapp3.1\LeilaoWeb.Data.csproj.CopyComplete
+C:\www\desafio-totvs\backend\src\LeilaoWeb.Data\obj\Debug\netcoreapp3.1\LeilaoWeb.Data.dll
+C:\www\desafio-totvs\backend\src\LeilaoWeb.Data\obj\Debug\netcoreapp3.1\LeilaoWeb.Data.pdb

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "6nVOuimJIiatpCibQZjHb1zsq03RWiAAdM6OuKD2kbml7B5srxMoy4UCwwB/TK1SUmoPlJazBMsOPH9ZA1KviQ==",
+  "success": true,
+  "projectFilePath": "C:\\www\\desafio-totvs\\backend\\src\\LeilaoWeb.Business\\LeilaoWeb.Business.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\erijr\\.nuget\\packages\\fluentvalidation\\8.6.2\\fluentvalidation.8.6.2.nupkg.sha512",
+    "C:\\Users\\erijr\\.nuget\\packages\\system.componentmodel.annotations\\4.4.1\\system.componentmodel.annotations.4.4.1.nupkg.sha512"
+  ],
+  "logs": []
+}
