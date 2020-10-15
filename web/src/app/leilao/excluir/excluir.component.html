@@ -22,7 +22,13 @@
                     Condição
                 </dt>
                 <dd>
-                    {{ leilao.condicao }}
+                    {{leilao.condicao === 1 ? "Novo" : "Usado" }}
+                </dd>
+                <dt>
+                    Nome do Responsável
+                </dt>
+                <dd>
+                    {{ leilao.nomeResponsavel }}
                 </dd>
                 <dt>
                     DataAbetura

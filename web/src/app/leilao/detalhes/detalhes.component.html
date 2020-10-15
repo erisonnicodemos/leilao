@@ -5,6 +5,7 @@
 
     <div class="row">
         <div class="col-md-6">
+           
             <dl>
                 <dt>
                     Nome
@@ -16,20 +17,39 @@
                     Valor Inicial
                 </dt>
                 <dd>
-                    {{ leilao.valorInicial | currencyBrazil  }}
+                    {{ leilao.valorInicial | currencyBrazil }}
                 </dd>
                 <dt>
-                    Condicão
+                    Condição
                 </dt>
                 <dd>
                     {{leilao.condicao === 1 ? "Novo" : "Usado" }}
                 </dd>
-
                 <dt>
-                    Ativo?
+                    Nome do Responsável
                 </dt>
                 <dd>
-                    <input [checked]="leilao.ativo" class="check-box" disabled="disabled" type="checkbox">
+                    {{ leilao.nomeResponsavel }}
+                </dd>
+                <dt>
+                    DataAbetura
+                </dt>
+                <dd>
+                    {{ leilao.dataAbetura | date:'dd/MM/yyyy' }}
+                </dd>
+                <dt>
+                    Data Finalização
+                </dt>
+                <dd>
+                    {{ leilao.dataFinalizacao | date:'dd/MM/yyyy' }}
+                </dd>
+                <dt>
+                    Item Ativo?
+                </dt>
+                <dd>
+                    {{leilao.ativo === true ? "Sim" : "Não" }}
+
+                    <!-- <input [checked]="leilao.ativo" class="check-box" disabled="disabled" type="checkbox"> -->
                 </dd>
             </dl>
 
@@ -39,5 +59,4 @@
             </div>
         </div>
     </div>
-
 </div>

@@ -9,6 +9,8 @@ namespace LeilaoWeb.Api.Configuration
         public AutomapperConfig()
         {
             CreateMap<Leilao, LeilaoViewModel>().ReverseMap();
+            CreateMap<Usuario, UsuarioViewModel>().ReverseMap();
+
         }
     }
 }

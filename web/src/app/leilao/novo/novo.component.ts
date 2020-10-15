@@ -51,6 +51,7 @@ export class NovoComponent extends LeilaoBaseComponent implements OnInit {
 
       this.user = this.localStorageUtils.obterUsuario();
       this.leilao.userId = this.user.id;
+      this.leilao.nomeResponsavel = this.user.nome;
       
       this.LeilaoService.novoLeilao(this.leilao)
         .subscribe(

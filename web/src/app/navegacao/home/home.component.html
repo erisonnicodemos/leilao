@@ -3,11 +3,11 @@
     <div class="container h-100">
         <div class="row h-100 align-items-center">
             <div class="col-lg-2">
-                <img  src="/assets/leilao.png" alt="">
+                <img src="/assets/leilao.png" alt="">
             </div>
             <div class="col-lg-10">
                 <h1 class="display-5 text-white mt-5 mb-2"> Leilão SPA</h1>
-                <p class="lead mb-5 text-white">Aplicação desenvolvimento para o teste Desafio Fullstack da TOTVS                </p>
+                <p class="lead mb-5 text-white">Aplicação Demo utilizando Angular 2 e Back-End com .Net Core</p>
             </div>
         </div>
     </div>
@@ -17,17 +17,24 @@
     <div class="row text-center">
 
         <div *ngFor="let leilao of leiloes" class="col-lg-3 col-md-6 mb-4">
-            <div class="card h-100">
-                <div class="card-body">
+
+            <div class="card item">
+                <span [ngClass]="{'tipo-item-novo': leilao.condicao === 1 , 'tipo-item-usado':leilao.condicao === 2 }">
+                    {{leilao.condicao === 1 ? "Novo" : "Usado" }}
+                </span>
+                <div class="card-title">
                     <h4 class="card-title">{{ leilao.nome }}</h4>
                 </div>
+                <div class="card-body">
+                    {{leilao.valorInicial | currencyBrazil }}
+                    <a href="#" class="badge badge-light"> Finaliza em {{leilao.dataFinalizacao | date:'dd/MM/yyyy'}}
+                    </a>
+                </div>
                 <div class="card-footer">
-                    <a  [routerLink]="['/leiloes/detalhes',leilao.id]" class="btn btn-primary">Mais detalhes</a>
+                    <a [routerLink]="['/leiloes/detalhes',leilao.id]" class="btn btn-primary">Mais detalhes</a>
                 </div>
             </div>
         </div>
-
-        
     </div>
 </div>
 <!-- Fim Content -->

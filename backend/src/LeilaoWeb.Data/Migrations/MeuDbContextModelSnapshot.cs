@@ -41,6 +41,10 @@ namespace LeilaoWeb.Data.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(200)");
 
+                    b.Property<string>("NomeResponsavel")
+                        .IsRequired()
+                        .HasColumnType("varchar(100)");
+
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
 
@@ -50,6 +54,25 @@ namespace LeilaoWeb.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Leiloes");
+                });
+
+            modelBuilder.Entity("LeilaoWeb.Business.Models.Usuario", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<string>("Telefone")
+                        .IsRequired()
+                        .HasColumnType("varchar(15)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Usuario");
                 });
 #pragma warning restore 612, 618
         }

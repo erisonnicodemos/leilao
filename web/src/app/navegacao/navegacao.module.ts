@@ -11,6 +11,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MenuLoginComponent } from './menu-login/menu-login.component';
 import { AcessoNegadoComponent } from './acesso-negado/acesso-negado.component';
 
+import { NgBrazil } from 'ng-brazil' 
+
+
 @NgModule({
     declarations: [
         MenuComponent,
@@ -23,7 +26,8 @@ import { AcessoNegadoComponent } from './acesso-negado/acesso-negado.component';
     imports: [
         CommonModule,
         RouterModule,
-        NgbModule
+        NgbModule,
+        NgBrazil
     ],
     exports: [
         MenuComponent,

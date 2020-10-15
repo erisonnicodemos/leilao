@@ -17,6 +17,8 @@ namespace LeilaoWeb.Api.ViewModels
 
         public int Condicao { get; set; }
 
+        public string NomeResponsavel { get; set; }
+
         public Guid UserId { get; set; }
 
         [Required(ErrorMessage = "O campo {0} é obrigatório")]

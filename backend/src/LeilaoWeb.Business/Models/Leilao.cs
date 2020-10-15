@@ -7,6 +7,7 @@ namespace LeilaoWeb.Business.Models
         public string Nome { get; set; }
         public decimal ValorInicial { get; set; }
         public Condicao Condicao { get; set; }
+        public string NomeResponsavel { get; set; }
         public Guid UserId { get; set; }
         public DateTime DataAbetura { get; set; }
         public DateTime DataFinalizacao { get; set; }

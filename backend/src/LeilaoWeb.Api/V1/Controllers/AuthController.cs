@@ -4,10 +4,12 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 using LeilaoWeb.Api.Controllers;
 using LeilaoWeb.Api.Extensions;
 using LeilaoWeb.Api.ViewModels;
 using LeilaoWeb.Business.Intefaces;
+using LeilaoWeb.Business.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -25,16 +27,23 @@ namespace LeilaoWeb.Api.V1.Controllers
         private readonly AppSettings _appSettings;
         private readonly ILogger _logger;
 
-        public AuthController(INotificador notificador, 
-                              SignInManager<IdentityUser> signInManager, 
-                              UserManager<IdentityUser> userManager, 
+        private readonly IUsuarioRepository _usuarioRepository;
+        private readonly IUsuarioService _usuarioService;
+        private readonly IMapper _mapper;
+
+        public AuthController(INotificador notificador,
+                              SignInManager<IdentityUser> signInManager,
+                              UserManager<IdentityUser> userManager,
                               IOptions<AppSettings> appSettings,
-                              IUser user, ILogger<AuthController> logger) : base(notificador, user)
+                              IUser user, ILogger<AuthController> logger, IUsuarioRepository usuarioRepository, IUsuarioService usuarioService, IMapper mapper) : base(notificador, user)
         {
             _signInManager = signInManager;
             _userManager = userManager;
             _logger = logger;
             _appSettings = appSettings.Value;
+            _usuarioRepository = usuarioRepository;
+            _usuarioService = usuarioService;
+            _mapper = mapper;
         }
 
         //[EnableCors("Development")]
@@ -55,6 +64,15 @@ namespace LeilaoWeb.Api.V1.Controllers
             {
                 await _signInManager.SignInAsync(user, false);
                 await _userManager.AddClaimAsync(user, new Claim("Leilao", "Adicionar,Atualizar,Excluir"));
+                
+                var usuarioViewModel = new UsuarioViewModel {
+                    Id = new Guid(user.Id),
+                    Nome = registerUser.Nome,
+                    Telefone = registerUser.Telefone
+                };
+
+                await _usuarioService.Adicionar(_mapper.Map<Usuario>(usuarioViewModel));
+
 
                 return CustomResponse(await GerarJwt(user.Email));
             }
@@ -91,6 +109,7 @@ namespace LeilaoWeb.Api.V1.Controllers
         private async Task<LoginResponseViewModel> GerarJwt(string email)
         {
             var user = await _userManager.FindByEmailAsync(email);
+            var usuario = await _usuarioRepository.ObterPorId(new Guid(user.Id));
             var claims = await _userManager.GetClaimsAsync(user);
             var userRoles = await _userManager.GetRolesAsync(user);
 
@@ -128,6 +147,7 @@ namespace LeilaoWeb.Api.V1.Controllers
                 {
                     Id = user.Id,
                     Email = user.Email,
+                    Nome = usuario.Nome,
                     Claims = claims.Select(c=> new ClaimViewModel{ Type = c.Type, Value = c.Value})
                 }
             };

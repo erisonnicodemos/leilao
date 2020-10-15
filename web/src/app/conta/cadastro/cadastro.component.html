@@ -24,6 +24,26 @@
         </div>
 
         <div class="form-group">
+            <label class="col-md-2 control-label">Nome</label>
+            <div class="col-md-10">
+                <input class="form-control" id="nome" type="text" placeholder="Nome Completo (requerido)" formControlName="nome" [ngClass]="{'is-invalid': displayMessage.nome }" />
+                <span class="text-danger" *ngIf="displayMessage.nome">
+                                <p [innerHTML]="displayMessage.nome"></p>
+                            </span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-2 control-label">Telefone</label>
+            <div class="col-md-10">
+                <input class="form-control" id="telefone" type="text" placeholder="Informe um numero de Telefone (requerido)" formControlName="telefone" [ngClass]="{'is-invalid': displayMessage.telefone }" />
+                <span class="text-danger" *ngIf="displayMessage.telefone">
+                                <p [innerHTML]="displayMessage.telefone"></p>
+                            </span>
+            </div>
+        </div>
+
+        <div class="form-group">
             <label class="col-md-2 control-label">Senha</label>
             <div class="col-md-10">
                 <input class="form-control" id="password" type="password" placeholder="Senha (requerido)" formControlName="password" [ngClass]="{'is-invalid': displayMessage.password }" />

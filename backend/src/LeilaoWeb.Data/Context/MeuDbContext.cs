@@ -12,6 +12,8 @@ namespace LeilaoWeb.Data.Context
         public MeuDbContext(DbContextOptions<MeuDbContext> options) : base(options) { }
 
         public DbSet<Leilao> Leiloes { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

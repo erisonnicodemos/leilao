@@ -34,6 +34,12 @@ export class CadastroComponent extends FormBaseComponent implements OnInit, Afte
         required: 'Informe o e-mail',
         email: 'Email inválido'
       },
+      nome: {
+        required: 'Informe o Nome Completo',
+      },
+      telefone: {
+        required: 'Informe um numero de Telefone',
+      },
       password: {
         required: 'Informe a senha',
         rangeLength: 'A senha deve possuir entre 6 e 15 caracteres'
@@ -55,6 +61,8 @@ export class CadastroComponent extends FormBaseComponent implements OnInit, Afte
 
     this.cadastroForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
+      nome: ['', [Validators.required]],
+      telefone: ['', [Validators.required]],
       password: senha,
       confirmPassword: senhaConfirm
     });

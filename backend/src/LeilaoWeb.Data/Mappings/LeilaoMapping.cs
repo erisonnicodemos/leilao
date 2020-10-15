@@ -18,6 +18,10 @@ namespace LeilaoWeb.Data.Mappings
                 .IsRequired()
                 .HasColumnType("int");
 
+            builder.Property(p => p.NomeResponsavel)
+              .IsRequired()
+              .HasColumnType("varchar(100)");
+
             builder.Property(p => p.DataAbetura)
                 .IsRequired()
             .HasColumnType("date");

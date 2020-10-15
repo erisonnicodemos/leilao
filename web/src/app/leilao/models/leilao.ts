@@ -3,6 +3,7 @@ export class Leilao {
   nome: string;
   valorInicial: number
   condicao: number;
+  nomeResponsavel: string;
   userId: string;
   dataAbetura: Date;
   dataFinalizacao: Date;

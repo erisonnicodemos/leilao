@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LeilaoWeb.Api.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201013224257_tbsIdentity")]
-    partial class tbsIdentity
+    [Migration("20201015013252_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

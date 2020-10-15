@@ -76,6 +76,7 @@ namespace LeilaoWeb.Api.V1.Controllers
             leilaoAtualizacao.Nome = leilaoViewModel.Nome;
             leilaoAtualizacao.ValorInicial = leilaoViewModel.ValorInicial;
             leilaoAtualizacao.Condicao = leilaoViewModel.Condicao;
+            leilaoAtualizacao.NomeResponsavel = leilaoViewModel.NomeResponsavel;
             leilaoAtualizacao.UserId = leilaoViewModel.UserId;
             leilaoAtualizacao.DataAbetura = leilaoViewModel.DataAbetura;
             leilaoAtualizacao.DataFinalizacao = leilaoViewModel.DataFinalizacao;
