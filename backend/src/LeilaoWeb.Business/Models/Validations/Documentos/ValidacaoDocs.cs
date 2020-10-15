@@ -148,8 +148,8 @@ namespace LeilaoWeb.Business.Models.Validations.Documentos
             var soma = 0;
             for (int i = _numero.Length - 1, m = 0; i >= 0; i--)
             {
-                var produto = (int)char.GetNumericValue(_numero[i]) * _multiplicadores[m];
-                soma += produto;
+                var leilao = (int)char.GetNumericValue(_numero[i]) * _multiplicadores[m];
+                soma += leilao;
 
                 if (++m >= _multiplicadores.Count) m = 0;
             }
