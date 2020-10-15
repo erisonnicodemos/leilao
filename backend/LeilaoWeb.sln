@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeilaoWeb.Business", "src\L
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeilaoWeb.Api", "src\LeilaoWeb.Api\LeilaoWeb.Api.csproj", "{317D0D85-62B0-4CAD-A6C0-3B776CA5CBBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeilaoWeb.Test", "src\LeilaoWeb.Test\LeilaoWeb.Test.csproj", "{DB73F11D-D22A-4934-B69C-22C090A539A6}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{317D0D85-62B0-4CAD-A6C0-3B776CA5CBBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{317D0D85-62B0-4CAD-A6C0-3B776CA5CBBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{317D0D85-62B0-4CAD-A6C0-3B776CA5CBBE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DB73F11D-D22A-4934-B69C-22C090A539A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DB73F11D-D22A-4934-B69C-22C090A539A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DB73F11D-D22A-4934-B69C-22C090A539A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DB73F11D-D22A-4934-B69C-22C090A539A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
