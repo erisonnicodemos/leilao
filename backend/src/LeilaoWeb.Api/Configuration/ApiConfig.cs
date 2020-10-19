@@ -45,7 +45,7 @@ namespace LeilaoWeb.Api.Configuration
                     builder =>
                         builder
                             .WithMethods("GET")
-                            .WithOrigins("http://desenvolvedor.io")
+                            .WithOrigins("https://localhost/")
                             .SetIsOriginAllowedToAllowWildcardSubdomains()
                             .AllowAnyHeader());
             });
