@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FluentValidation.Results;
+using LeilaoWeb.Business.Models.Validations;
+using System;
 
 namespace LeilaoWeb.Business.Models
 {

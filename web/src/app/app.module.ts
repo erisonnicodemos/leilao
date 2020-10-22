@@ -13,8 +13,6 @@ import { NavegacaoModule } from './navegacao/navegacao.module';
 import { ErrorInterceptor } from './services/error.handler.service';
 import { LeilaoService } from './leilao/services/leilao.service';
 
-
-
 export const httpInterceptorProviders = [
   { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 ];

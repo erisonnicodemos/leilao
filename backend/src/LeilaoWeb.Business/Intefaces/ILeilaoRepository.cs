@@ -9,6 +9,7 @@ namespace LeilaoWeb.Business.Intefaces
     {
         Task<IEnumerable<Leilao>> ObterLeliloes();
         Task<IEnumerable<Leilao>> ObterLeliloesPorUsuario(Guid userId);
+        Task<IEnumerable<Leilao>> ObterLeliloesPorNome(string nome);
         Task<Leilao> ObterLeilao(Guid id);
     }
 }

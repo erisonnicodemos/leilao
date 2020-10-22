@@ -20,10 +20,18 @@ namespace LeilaoWeb.Data.Repository
                            .FirstOrDefaultAsync(p => p.Id == id);
         }
 
-        public async  Task<IEnumerable<Leilao>> ObterLeliloes()
+        public async Task<IEnumerable<Leilao>> ObterLeliloes()
         {
             return await Db.Leiloes.AsNoTracking()
                 .OrderBy(p => p.DataAbetura).ToListAsync();
+        }
+
+        public async Task<IEnumerable<Leilao>> ObterLeliloesPorNome(string nome)
+        {
+            return await Db.Leiloes.AsNoTracking()
+                 .Where(n => n.Nome.Contains(nome))
+                 .OrderBy(n => n.Nome)
+                 .ToListAsync();
         }
 
         public async Task<IEnumerable<Leilao>> ObterLeliloesPorUsuario(Guid userId)
