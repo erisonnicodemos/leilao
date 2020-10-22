@@ -3,9 +3,22 @@
     <h1>Leilões Cadastrados</h1>
     <hr>
 
-    <p>
-        <a class="btn btn-info" [routerLink]="['/leiloes/adicionar-novo']">Cadastrar Novo Leilão</a>
-    </p>
+    <div class="row ">
+        <div class="col-md-8">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" [formControl]="queryField"
+                    placeholder="Localizar Leilão por Nome">
+                <div class="input-group-append">
+                    <button class="btn btn-success" (click)="onSearch()">Buscar</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 d-flex flex-row-reverse">
+            <p>
+                <a class="btn btn-info" [routerLink]="['/leiloes/adicionar-novo']">Cadastrar Novo Leilão</a>
+            </p>
+        </div>
+    </div>
 
     <table class="table table-hover">
         <thead class="thead-dark">
@@ -26,6 +39,13 @@
             </tr>
         </thead>
         <tbody>
+
+            <div class="alert alert-warning mt-5" *ngIf="leiloes.length==0">
+                <h3 id="msgRetorno">
+                    Não foi encontrado nenhum Leilão cadastrado!
+                </h3>               
+            </div>
+
             <tr *ngFor="let leilao of leiloes">
                 <td>
                     {{ leilao.nome }}

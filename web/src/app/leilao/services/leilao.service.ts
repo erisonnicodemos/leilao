@@ -17,6 +17,12 @@ export class LeilaoService extends BaseService {
             .get<Leilao[]>(this.UrlServiceV1 + "leiloes", super.ObterAuthHeaderJson())
             .pipe(catchError(super.serviceError));
     }
+   
+    ObterLeiloesPorNome(nome: string): Observable<Leilao> {
+        return this.http
+            .get<Leilao>(this.UrlServiceV2 + "leiloes?nome=" + nome, super.ObterAuthHeaderJson())
+            .pipe(catchError(super.serviceError));
+    }
 
     obterPorId(id: string): Observable<Leilao> {
         return this.http

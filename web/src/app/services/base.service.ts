@@ -6,6 +6,8 @@ import { LocalStorageUtils } from '../utils/localstorage';
 export abstract class BaseService {
 
     protected UrlServiceV1: string = environment.apiUrlv1;
+    protected UrlServiceV2: string = environment.apiUrlv2;
+
     public LocalStorage = new LocalStorageUtils();
 
     protected ObterHeaderJson() {
